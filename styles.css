@@ -57,7 +57,7 @@ textarea {
 
 .header {
   position: relative;
-  height: 100px;
+  height: 85px;
   display: flex;
   align-items: center;
   z-index: 1;
@@ -84,7 +84,6 @@ textarea {
 }
 
 .header__logo {
-  height: 100px;
   object-fit: contain;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
@@ -120,7 +119,6 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* align-items: stretch; */
   color: var(--golden-color);
   background: linear-gradient(
     90deg,
@@ -131,23 +129,25 @@ button:hover {
 }
 
 .info-section__advertisement {
-  padding-left: 8rem;
-  padding-top: 10rem;
-  /* display: flex; */
+  padding-left: 3rem;
+  padding-top: 8rem;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
+  padding-right: 3rem;
+
 }
 
 .info-section__advertisement--sub-heading {
-  font-size: 3.1rem;
+  font-size: 2.2rem;
   font-weight: 600;
   margin: 0%;
 }
 .info-section__advertisement--main-heading {
-  font-size: 3.8rem;
-  font-weight: 600;
+  font-size: 50px;
+  font-weight: 650;
   margin: 0%;
+  width: 26rem;
 }
 
 .info-section__advertisement--tagline {
@@ -209,7 +209,8 @@ button:hover {
 }
 
 .info-section__slider--left,
-.info-section__slider--right {
+.info-section__slider--right,
+.info-section__slider--center {
   flex-direction: column-reverse;
   animation: slider-scroll-up 6s linear infinite;
 }
@@ -286,13 +287,19 @@ button:hover {
 }
 
 .info-section__enquiry-container--input {
-  background-color: var(--form-input-background-color, 0.2);
+  background-color: #573480;
   border: none;
-  border-radius: 0.2rem;
-  padding: 0.8rem;
-  opacity: 0.2;
-  color: var(--primary-color); /* Changed to a visible color */
+  border-radius: 0.4rem;
+  padding: 0.9rem;
+  color: #ffffff;
 }
+
+
+/* Enquiry form placeholder in white only */
+.info-section__enquiry-container--input::placeholder {
+  color: #ffffff;
+}
+
 
 input[type="text"]:focus {
   border: none;
@@ -378,24 +385,27 @@ input[type="email"]:focus {
 
 /* choose school section   */
 
-.choose-school-section-heading {
-  display: flex;
-  color: var(--primary-color);
-  justify-content: center;
-  font-size: 2rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+.choose-school-section {
+  padding: 4rem;
 }
 
-.choose-school-section-images {
+.choose-school-section__heading {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.choose-school-section__images {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding-bottom: 4rem;
 }
 
-.choose-school-section {
-  padding-bottom: 3rem;
+.choose-school-section__images img {
+  width: 25%;
+  height: 300px;
+  border-radius: 1rem;
+  object-fit: cover;
 }
 
 /* pre-schedule section  */
@@ -408,7 +418,7 @@ input[type="email"]:focus {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .pre-schedule-section__info {
@@ -499,13 +509,27 @@ input[type="email"]:focus {
 
 .exhibition-section__buttons button {
   background: #ffffff;
+  padding: 1rem;
   border: none;
   width: 3rem;
   height: 3rem;
+  text-align: center;
   border-radius: 50%;
-  font-size: 1.2rem;
   cursor: pointer;
 }
+
+.exhibition-section__prev-button::before {
+  content: '←';
+  color: #381765;
+  font-weight: bold;
+}
+
+.exhibition-section__next-button::before {
+  content: '→';
+  color: #381765;
+  font-weight: bold;
+}
+
 .exhibition-section__heading{
   color:#fff;
   font-size:2rem;
@@ -513,41 +537,54 @@ input[type="email"]:focus {
 }
 
 /* Footer section  */
-
-
-
-.footer-section{
+.footer-section {
   display: flex;
   flex-direction: row;
-  gap: 5rem;
-  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  /* justify-content: center; */
   background-color: #070F3D;
   color: #fff;
-}
-.footer-section__addresses {
-  display: flex;
-  flex-direction: row;
-  gap: 8rem;
+  padding: 4rem;
 }
 
-.footer-section__address--maininfo{
-  font-size: 1rem
+.footer-section__logo {
+  height: auto;
+  object-fit: contain;
 }
-.footer-section-socialmedialinks-images{
-  width: 2rem;
-  height: 2rem; 
+
+.footer-section__address {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 22rem;
 }
 
 .footer-section__address--heading {
-  display: block; /* 🔑 THIS is the key */
-  gap: 0.75rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.footer-section-address-icon {
-  width: 2.2rem;
-  height: 2.2rem;
-  margin-top: 0.2rem; /* fine-tune vertical position */
+.footer-section__address--heading h3 {
+  margin: 0;
 }
+
+.footer-section__address--heading p {
+  margin-top: 0.6rem;
+}
+
+.footer-section__social-media h3 {
+  margin-top: 0;
+}
+
+.footer-section__social-media-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+
  
 /* copyright section  */
 
@@ -555,7 +592,382 @@ input[type="email"]:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-weight: 400;
   color: #000E38;
   padding: 1rem 0;
+}
+
+
+/* sticky nav  */
+
+/* ===============================
+   STICKY HEADER (FINAL FIX)
+   =============================== */
+
+.header {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Sticky state */
+.header--sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #2a1459;
+  z-index: 1000;
+  padding: 0 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Fix logo position (critical) */
+.header--sticky .header__logo-wrapper {
+  position: static;
+  transform: none;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo size */
+.header--sticky .header__logo {
+  height: 55px;
+}
+
+/* Container alignment */
+.header--sticky .header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+
+ }
+
+/* Button spacing */
+.header--sticky .header__register-btn {
+  margin-right: 2rem;
+  background-color: #ffffff;
+  color: #2a1459;
+  border-color: #ffffff;
+}
+
+.header--sticky + main {
+  padding-top: 80px;
+ 
+}
+
+
+
+
+/* responsive styles   */
+
+@media (max-width: 768px) {
+
+  /* ---------- GLOBAL FIXES ---------- */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ---------- HEADER ---------- */
+  .header {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .header__container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header__logo-wrapper {
+    position: static;
+    transform: none;
+  }
+
+  /* ---------- INFO SECTION (HERO) ---------- */
+  .info-section {
+    flex-direction: column;
+    min-height: auto;
+    max-height: none;
+    padding: 1.5rem 1rem;
+    gap: 2rem;
+  }
+
+  .info-section__advertisement {
+    padding: 0;
+    text-align: center;
+  }
+
+  .info-section__advertisement--main-heading {
+    width: 100%;
+    font-size: 2.2rem;
+  }
+
+  .info-section__advertisement--sub-heading {
+    font-size: 1.4rem;
+  }
+
+  .info-section__advertisement--tagline {
+    font-size: 1.2rem;
+  }
+
+  /* Address pill */
+  .info-section__address {
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.8rem;
+  }
+
+  .info-section__address--pipe {
+    display: none;
+  }
+
+  /* ---------- SLIDERS (DISABLE ANIMATION) ---------- */
+  .info-section__sliders {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.8rem;
+    height: auto;
+  }
+
+  .info-section__slider {
+    animation: none !important;
+  }
+
+  :root {
+    --slider-img-width: 5.5rem;
+    --slider-img-height: 8.5rem;
+  }
+
+  /* ---------- ENQUIRY FORM ---------- */
+  .info-section__enquiry-container {
+    padding: 0;
+    width: 100%;
+  }
+
+  .info-section__enquiry-container--form {
+    width: 100%;
+    min-width: unset;
+  }
+
+  /* ---------- BANNER ---------- */
+  .info-banner {
+    height: auto;
+    margin: 2rem 0;
+  }
+
+  .info-banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ---------- PARTICIPATING SCHOOLS ---------- */
+  .participating-schools__grid {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .participating-schools__img {
+    width: 45%;
+    max-width: 160px;
+  }
+
+  /* ---------- CHOOSE SCHOOL ---------- */
+  .choose-school-section {
+    padding: 2rem 1rem;
+  }
+
+  .choose-school-section__images {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .choose-school-section__images img {
+    width: 100%;
+    height: 220px;
+  }
+
+  /* ---------- PRE-SCHEDULE SECTION ---------- */
+  .pre-schedule-section {
+    flex-direction: column;
+  }
+
+  .pre-schedule-section__info {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .pre-schedule-section__image {
+    mask-image: none;
+  }
+
+  .pre-schedule-section__image img {
+    height: 260px;
+  }
+
+  .pre-schedule-button {
+    width: 100%;
+  }
+
+  /* ---------- EXHIBITION SECTION ---------- */
+  .exhibition-section {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .exhibition-section__images {
+    gap: 1rem;
+  }
+
+  .exhibition-section__image {
+    height: 14rem;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer-section {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .footer-section__address {
+    max-width: 100%;
+  }
+
+  /* ---------- COPYRIGHT ---------- */
+  .copyright-section {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ---------- HEADER ---------- */
+  .header {
+    padding: 1rem 2rem;
+  }
+
+  .header__container {
+    gap: 1.5rem;
+  }
+
+  /* ---------- INFO SECTION ---------- */
+  .info-section {
+    flex-direction: column;
+    padding: 2.5rem 2rem;
+    max-height: none;
+    gap: 2.5rem;
+  }
+
+  .info-section__advertisement {
+    padding: 0;
+    text-align: center;
+  }
+
+  .info-section__advertisement--main-heading {
+    width: 100%;
+    font-size: 2.8rem;
+  }
+
+  .info-section__advertisement--sub-heading {
+    font-size: 1.8rem;
+  }
+
+  .info-section__advertisement--tagline {
+    font-size: 1.4rem;
+  }
+
+  /* Address */
+  .info-section__address {
+    justify-content: center;
+    padding: 1rem 1.5rem;
+  }
+
+  /* ---------- SLIDERS ---------- */
+  .info-section__sliders {
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  :root {
+    --slider-img-width: 7.5rem;
+    --slider-img-height: 13rem;
+  }
+
+  /* ---------- ENQUIRY FORM ---------- */
+  .info-section__enquiry-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .info-section__enquiry-container--form {
+    width: 70%;
+    min-width: unset;
+  }
+
+  /* ---------- PARTICIPATING SCHOOLS ---------- */
+  .participating-schools__grid {
+    gap: 1.2rem;
+  }
+
+  /* ---------- CHOOSE SCHOOL ---------- */
+  .choose-school-section {
+    padding: 3rem 2rem;
+  }
+
+  .choose-school-section__images {
+    gap: 1.5rem;
+  }
+
+  .choose-school-section__images img {
+    width: 48%;
+    height: 260px;
+  }
+
+  /* ---------- PRE-SCHEDULE ---------- */
+  .pre-schedule-section {
+    gap: 1.5rem;
+  }
+
+  .pre-schedule-section__info {
+    padding: 3rem 2rem;
+  }
+
+  .pre-schedule-section__image img {
+    height: 380px;
+  }
+
+  /* ---------- EXHIBITION ---------- */
+  .exhibition-section {
+    height: auto;
+    padding: 4rem 2rem;
+  }
+
+  .exhibition-section__image {
+    height: 18rem;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer-section {
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .footer-section__address {
+    max-width: 45%;
+  }
+
 }

@@ -41,7 +41,11 @@
           </div>
         </div>
         <div class="info-section__sliders">
-          <div class="info-section__slider info-section__slider--left">
+          <div
+            class="info-section__slider info-section__slider--left"
+            role="slider"
+            aria-label="School Icons Slider Left Direction"
+          >
             <img
               src="assets/img1.png"
               alt="School 1"
@@ -63,7 +67,11 @@
               class="info-section__slider-img"
             />
           </div>
-          <div class="info-section__slider info-section__slider--center">
+          <div
+            class="info-section__slider info-section__slider--center"
+            role="slider"
+            aria-label="School Icons Slider Right Direction"
+          >
             <img
               src="assets/img5.png"
               alt="School 5"
@@ -280,10 +288,10 @@
       </section>
 
       <section class="choose-school-section">
-        <div class="choose-school-section-heading">
+        <div class="choose-school-section__heading">
           <h2>Choose the School That Fits You Best</h2>
         </div>
-        <div class="choose-school-section-images">
+        <div class="choose-school-section__images">
           <img src="assets/choose schools/01.png" alt="Choose school image" />
           <img src="assets/choose schools/02.png" alt="Choose school image" />
           <img src="assets/choose schools/03.png" alt="Choose school image" />
@@ -341,73 +349,107 @@
         </div>
 
         <div class="exhibition-section__buttons">
-          <button aria-label="Previous image">←</button>
-          <button aria-label="Next image">→</button>
+          <button
+            aria-label="Previous image"
+            id="previous-button"
+            class="exhibition-section__prev-button"
+          ></button>
+          <button
+            aria-label="Next image"
+            id="next-button"
+            class="exhibition-section__next-button"
+          ></button>
         </div>
       </section>
 
       <section class="footer-section">
-  <div class="footer-section__logo">
-    <img src="assets/logo.png" alt="School Logo" class="footer__logo" />
-  </div>
+        <div class="footer-section__logo">
+          <img src="assets/logo.png" alt="School Logo" class="footer__logo" />
+        </div>
 
-  <div class="footer-section__addresses">
-    <div class="footer-section__address">
-      <div class="footer-section__address--heading">
-        <img src="assets/location.png" alt="location_icon" class="footer-section-address-icon">
-        <h3>Corporate Office:</h3>
-      </div>
-      <div class="footer-section__address--maininfo">
+        <div class="footer-section__address">
+          <div class="footer-section__address--locationlogo">
+            <img
+              src="assets/location.png"
+              alt="location_icon"
+              class="footer-section__address--locationlogo"
+            />
+          </div>
+          <div class="footer-section__address--heading">
+            <h3>Corporate Office:</h3>
+            <p>
+              12Suite B-5, Ballygunge Park Tower,<br />
+              67B Ballygunge Circular Road,<br />
+              Kolkata - 700019
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-section__address">
+          <div class="footer-section__address--locationlogo">
+            <img
+              src="assets/location.png"
+              alt="location_icon"
+              class="footer-section__address--locationlogo"
+            />
+          </div>
+          <div class="footer-section__address--heading">
+            <h3>Ahmedabad Office:</h3>
+            <p>
+              12/AA, Swastik Chambers,<br />
+              Near CU Shah College,<br />
+              Ahmedabad - 380009
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-section__address">
+          <div class="footer-section__address--locationlogo">
+            <img
+              src="assets/location.png"
+              alt="location_icon"
+              class="footer-section__address--locationlogo"
+            />
+          </div>
+          <div class="footer-section__address--heading">
+            <h3>Call us on</h3>
+            <p>
+              9674805912 <br />
+              9674585012
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-section__social-media">
+          <div class="footer-section__social-media-heading">
+            <h3>Follow us on:</h3>
+          </div>
+          <div class="footer-section__social-media-icons">
+            <img
+              src="assets/instagram.png"
+              alt="Instagram logo"
+              class="footer-section-socialmedialinks-images"
+            />
+            <img
+              src="assets/fb.png"
+              alt="Facebook logo"
+              class="footer-section-socialmedialinks-images"
+            />
+            <img
+              src="assets/yt.png"
+              alt="YouTube logo"
+              class="footer-section-socialmedialinks-images"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="copyright-section">
         <p>
-          Suite B-5, Ballygunge Park Tower,<br>
-          67B Ballygunge Circular Road,<br>
-          Kolkata - 700019
+          Copyright © 2025 | All rights reserved. Premier Schools Exhibition
         </p>
-      </div>
-    </div>
-
-    <div class="footer-section__address">
-      <div class="footer-section__address--heading">
-        <img src="assets/location.png" alt="location_icon" class="footer-section-address-icon">
-        <h3>Ahmedabad Office:</h3>
-      </div>
-      <div class="footer-section__address--maininfo">
-        <p>
-          12/AA, Swastik Chambers,<br>
-          Near CU Shah College,<br>
-          Ahmedabad - 380009
-        </p>
-      </div>
-    </div>
-
-    <div class="footer-section__address">
-      <div class="footer-section__address--heading">
-        <h3>Call us on</h3>
-      </div>
-      <div class="footer-section__address--maininfo">
-        <p> 9674805912 </p>
-        <p> 9674585012 </p>
-      </div>
-    </div>
-
-<div class="footer-section--socialmedialinks">
-  <div class="footer-section--socialmedialinks--info"><p>Follow us on:</p></div>
-  <div class="footer-section--socialmedialinks-instagram"> 
-    <img src="assets/instagram.png" alt="instagram_logo" class="footer-section-socialmedialinks-images">
-    <img src="assets/fb.png" alt="facebook_logo" class="footer-section-socialmedialinks-images">
-    <img src="assets/yt.png" alt="youtube_logo" class="footer-section-socialmedialinks-images">
-  </div>
-  <div class="footer-section--socialmedialinks-facebook"> </div>
-  <div class="footer-section--socialmedialinks-youtube"> </div>
-</div>
-
-  </div>
-</section>
-
-<section class="copyright-section">
-  <p>Copyright © 2025 | All rights reserved.  Premier Schools Exhibition</p>
-</section>
-
+      </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
