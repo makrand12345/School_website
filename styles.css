@@ -295,7 +295,7 @@ button:hover {
 }
 
 
-/* Enquiry form placeholder in white only */
+/* Enquiry form placeholder  */
 .info-section__enquiry-container--input::placeholder {
   color: #ffffff;
 }
@@ -418,7 +418,6 @@ input[type="email"]:focus {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  /* width: 100%; */
 }
 
 .pre-schedule-section__info {
@@ -542,7 +541,6 @@ input[type="email"]:focus {
   flex-direction: row;
   align-items: flex-start;
   gap: 4rem;
-  /* justify-content: center; */
   background-color: #070F3D;
   color: #fff;
   padding: 4rem;
@@ -600,9 +598,6 @@ input[type="email"]:focus {
 
 /* sticky nav  */
 
-/* ===============================
-   STICKY HEADER (FINAL FIX)
-   =============================== */
 
 .header {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -621,7 +616,7 @@ input[type="email"]:focus {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Fix logo position (critical) */
+/* Fix logo position  */
 .header--sticky .header__logo-wrapper {
   position: static;
   transform: none;
@@ -664,7 +659,6 @@ input[type="email"]:focus {
 
 @media (max-width: 768px) {
 
-  /* ---------- GLOBAL FIXES ---------- */
   * {
     box-sizing: border-box;
   }
@@ -673,7 +667,7 @@ input[type="email"]:focus {
     overflow-x: hidden;
   }
 
-  /* ---------- HEADER ---------- */
+  
   .header {
     height: auto;
     padding: 1rem;
@@ -689,7 +683,7 @@ input[type="email"]:focus {
     transform: none;
   }
 
-  /* ---------- INFO SECTION (HERO) ---------- */
+
   .info-section {
     flex-direction: column;
     min-height: auto;
@@ -716,7 +710,6 @@ input[type="email"]:focus {
     font-size: 1.2rem;
   }
 
-  /* Address pill */
   .info-section__address {
     flex-direction: column;
     gap: 0.4rem;
@@ -727,7 +720,7 @@ input[type="email"]:focus {
     display: none;
   }
 
-  /* ---------- SLIDERS (DISABLE ANIMATION) ---------- */
+
   .info-section__sliders {
     flex-direction: row;
     justify-content: center;
@@ -744,7 +737,6 @@ input[type="email"]:focus {
     --slider-img-height: 8.5rem;
   }
 
-  /* ---------- ENQUIRY FORM ---------- */
   .info-section__enquiry-container {
     padding: 0;
     width: 100%;
@@ -755,7 +747,6 @@ input[type="email"]:focus {
     min-width: unset;
   }
 
-  /* ---------- BANNER ---------- */
   .info-banner {
     height: auto;
     margin: 2rem 0;
@@ -766,7 +757,6 @@ input[type="email"]:focus {
     height: auto;
   }
 
-  /* ---------- PARTICIPATING SCHOOLS ---------- */
   .participating-schools__grid {
     animation: none;
     flex-wrap: wrap;
@@ -778,7 +768,6 @@ input[type="email"]:focus {
     max-width: 160px;
   }
 
-  /* ---------- CHOOSE SCHOOL ---------- */
   .choose-school-section {
     padding: 2rem 1rem;
   }
@@ -793,7 +782,6 @@ input[type="email"]:focus {
     height: 220px;
   }
 
-  /* ---------- PRE-SCHEDULE SECTION ---------- */
   .pre-schedule-section {
     flex-direction: column;
   }
@@ -815,7 +803,7 @@ input[type="email"]:focus {
     width: 100%;
   }
 
-  /* ---------- EXHIBITION SECTION ---------- */
+ 
   .exhibition-section {
     height: auto;
     padding: 3rem 1rem;
@@ -829,7 +817,6 @@ input[type="email"]:focus {
     height: 14rem;
   }
 
-  /* ---------- FOOTER ---------- */
   .footer-section {
     flex-direction: column;
     padding: 2rem 1.5rem;
@@ -840,7 +827,6 @@ input[type="email"]:focus {
     max-width: 100%;
   }
 
-  /* ---------- COPYRIGHT ---------- */
   .copyright-section {
     text-align: center;
     padding: 1rem;
@@ -854,7 +840,6 @@ input[type="email"]:focus {
     overflow-x: hidden;
   }
 
-  /* ---------- HEADER ---------- */
   .header {
     padding: 1rem 2rem;
   }
@@ -862,8 +847,6 @@ input[type="email"]:focus {
   .header__container {
     gap: 1.5rem;
   }
-
-  /* ---------- INFO SECTION ---------- */
   .info-section {
     flex-direction: column;
     padding: 2.5rem 2rem;
@@ -889,13 +872,11 @@ input[type="email"]:focus {
     font-size: 1.4rem;
   }
 
-  /* Address */
   .info-section__address {
     justify-content: center;
     padding: 1rem 1.5rem;
   }
 
-  /* ---------- SLIDERS ---------- */
   .info-section__sliders {
     justify-content: center;
     gap: 1.2rem;
@@ -906,7 +887,6 @@ input[type="email"]:focus {
     --slider-img-height: 13rem;
   }
 
-  /* ---------- ENQUIRY FORM ---------- */
   .info-section__enquiry-container {
     width: 100%;
     display: flex;
@@ -918,12 +898,10 @@ input[type="email"]:focus {
     min-width: unset;
   }
 
-  /* ---------- PARTICIPATING SCHOOLS ---------- */
   .participating-schools__grid {
     gap: 1.2rem;
   }
 
-  /* ---------- CHOOSE SCHOOL ---------- */
   .choose-school-section {
     padding: 3rem 2rem;
   }
@@ -937,7 +915,6 @@ input[type="email"]:focus {
     height: 260px;
   }
 
-  /* ---------- PRE-SCHEDULE ---------- */
   .pre-schedule-section {
     gap: 1.5rem;
   }
@@ -950,7 +927,6 @@ input[type="email"]:focus {
     height: 380px;
   }
 
-  /* ---------- EXHIBITION ---------- */
   .exhibition-section {
     height: auto;
     padding: 4rem 2rem;
@@ -960,7 +936,6 @@ input[type="email"]:focus {
     height: 18rem;
   }
 
-  /* ---------- FOOTER ---------- */
   .footer-section {
     flex-wrap: wrap;
     gap: 3rem;
